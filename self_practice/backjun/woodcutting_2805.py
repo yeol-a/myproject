@@ -6,10 +6,10 @@ wood=list(map(int,input().split()))
 
 
 def cuttinglevel(N, M):
-    largest=wood[0]
+    smallest=wood[0]
     for i in range(1,len(wood)-1):
-        if largest < wood[i]:
-            largest=wood[i]
+        if smallest > wood[i]:
+            smallest=wood[i]
     
     sum=0
     for i in range(len(wood)):
@@ -20,7 +20,7 @@ def cuttinglevel(N, M):
     target= sum - M
     print(target)
     target_list=[]
-    for i in range(0, largest+1):
+    for i in range(0, smallest+1):
         target_list.append(N*i)
         
     # print(target_list)
