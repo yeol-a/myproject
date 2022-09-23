@@ -1,0 +1,15 @@
+<h1>{{question.question_text}}</h1>
+<!--에러가 나면 에러 메세지 출력-->
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<!--투표 화면에서 실제 투표를 하도록 폼 태그 작성-->
+<form action="{% url 'vote' question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+<label for = "choice{{ forloop.counter }}">{{choice.choice_text}}</label><br>
+{% endfor %}
+<!--제출버튼-->
+<input type="submit" value="Vote">
+</form>
