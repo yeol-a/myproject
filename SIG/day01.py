@@ -81,3 +81,74 @@ print(((a%c) * (b%c))%c)
 # ay()
 
 
+#print("\    /\ \n )  ( ')\n(  /  )\n \(__)|")
+
+
+#print("|\_/|\n|q p|   /}\n( 0 )\"\"\"\\\n|\"^\"`    |\n||_/=\\__|")
+
+# print("|\\_/|")
+# print("|q p|   /}")
+# print("( 0 )\"\"\"\\")
+# print("|\"^\"`   
+
+# print("         ,r'\"7")
+# print("r`-_   ,'  ,/")
+# print(" \\. \". L_r'")
+# print("   `~\\/")
+# print("      |")
+# print("      |")
+
+# year = int(input())
+# if (year % 4 == 0 and year % 100 !=0) or year % 400 == 0:
+#     print(1)
+# else:
+#     print(0)
+
+
+
+
+# x=int(input()) 
+# y=int(input())
+
+# if x > 0 and y > 0 :
+#     print(1)
+# elif x < 0 and y > 0 :
+#     print(2)
+# elif x < 0 and y < 0 :
+#     print(3)
+# else:
+#     print(4)
+
+
+
+# if H >= 0 and M >= 45:
+#     print(H, M-45)
+# elif H > 0 and M < 45:
+#     print(H-1, 60+M-45)
+# elif H == 0 and M < 45:
+#     print(23, 60+M-45)
+    
+# H, M = map(int, input().split())
+# if   < 45:
+#     print(23, 60-(45-M))
+# else:
+#     H = (60*H+M-45)//60
+#     M = (60*H+M-45)%60
+#     print(H, M)
+
+A, B = map(int, input().split())
+C = int(input())
+
+if 60*A+B+C >= 1440:
+    H = abs(C-(60-B)) // 60
+    M = abs(C-(60-B)) % 60
+    print(H, M)
+else: 
+    H = (60*A+B+C) // 60
+    M = (60*A+B+C) % 60
+    print(H, M)
+    
+
+
+
+
