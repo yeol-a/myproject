@@ -136,19 +136,155 @@ print(((a%c) * (b%c))%c)
 #     M = (60*H+M-45)%60
 #     print(H, M)
 
+
+'''
 A, B = map(int, input().split())
 C = int(input())
 
-if 60*A+B+C >= 1440:
-    H = abs(C-(60-B)) // 60
-    M = abs(C-(60-B)) % 60
-    print(H, M)
-else: 
-    H = (60*A+B+C) // 60
-    M = (60*A+B+C) % 60
-    print(H, M)
+m = 60 * A + B + C
+if m >= 1440:
+    m -= 1440
     
+H = m // 60
+M = m % 60
+
+print(H, M)
+'''
+
+'''
+A, B, C = map(int, input().split())
+
+if A==B==C:
+    print(10000+A*1000)
+elif A==B:
+    print(1000+A*100)
+elif A==C:
+    print(1000+A*100)
+elif B==C:
+    print(1000+B*100)
+else:
+    print(100*max(A, B, C))
+'''
+'''
+inp = int(input())
+
+for i in range(1,10):
+    print(inp, "*", i, "=", inp*i)
+'''
+'''
+test = int(input())
+for i in range(test):
+    A, B = map(int, input().split())
+    print(A+B)
+'''
+'''
+inp = int(input())
+sum = 0
+
+for i in range(1, inp+1):
+    sum += i 
+print(sum)
+'''
+'''
+X = int(input())
+N = int(input())
+sum = 0
+
+for i in range(1, N+1):
+    a, b = map(int, input().split())
+    sum += a*b
+if sum == X:
+    print("Yes")
+else:
+    print("No")
+'''
+
+
+'''
+T = int(input())
+for i in range(T):
+    A, B = map(int, input().split())
+    print(A+B)
+'''
+'''
+import sys 
+T = int(input())
+for i in range(T):
+    A, B = map(int, sys.stdin.readline().split())
+    print(A+B)
+'''
+'''
+import sys
+T = int(input())
+for i in range(1, T+1):
+    A, B = map(int, sys.stdin.readline().split())
+    sum = A + B
+    print(f"Case #{i}: {sum}")
+'''
+'''
+import sys
+T = int(input())
+for i in range(1, T+1):
+    A, B = map(int, sys.stdin.readline().split())
+    print(f"Case #{i}: {A} + {B} = {A+B}")
+'''
+
+'''
+N = int(input())
+for i in range(1, N+1):
+    print(" "*(N-i)+"*"*i)
+'''
+'''
+N, X = map(int, input().split())
+A = list(map(int, input().split()))
+for i in range(len(A)):
+    if A[i] < X:
+        print(A[i], end=" ")
+'''
+'''
+A, B = map(int, input().split())
+print(A+B)
+while (A, B) != (0, 0): 
+    A, B = map(int, input().split())
+    print(A+B)
+'''
+'''
+while True:
+    A, B = map(int, input().split())
+    if A == 0 and B == 0:
+        break
+    else:
+        print(A+B)
+'''
+'''
+while True:
+    try:
+        A, B = map(int, input().split())
+        print(A+B)
+    except:
+        break
+        '''
 
 
 
 
+n = input()
+num = n
+cnt = 0
+
+while True:
+    if len(num) == 1:
+        num = "0" + num
+    plus = str(int(num[0])+int(num[1]))
+    num = num[-1]+plus[-1]
+    cnt +=1
+    if num == n:
+        print(cnt)
+        break 
+    
+n = int(input())
+num = n
+cnt = 0
+
+while 1:
+    
