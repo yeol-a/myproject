@@ -27,4 +27,3 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     modify_date = db.Column(db.DateTime(), nullable=True)
 
-    
