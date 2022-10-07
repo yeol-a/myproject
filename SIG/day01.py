@@ -81,6 +81,7 @@ print(((a%c) * (b%c))%c)
 # ay()
 
 
+
 #print("\    /\ \n )  ( ')\n(  /  )\n \(__)|")
 
 
@@ -267,7 +268,7 @@ while True:
 
 
 
-
+'''
 n = input()
 num = n
 cnt = 0
@@ -287,4 +288,29 @@ num = n
 cnt = 0
 
 while 1:
-    
+'''
+'''    
+while True:
+    try:
+        A, B = map(int, input().split())   
+        print(A+B)
+    except:
+        break
+
+import sys
+while True:
+    try:
+        A, B = map(int, sys.stdin.readline().split())   
+        print(A+B)
+    except:
+        break
+'''
+import sys
+while True:
+    try:
+        a = open(0).read()
+        a = a.close()
+        print(a)
+        #A, B = map(int, open(0).read().split())   
+    except:
+        break

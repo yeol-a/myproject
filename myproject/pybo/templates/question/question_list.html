@@ -13,17 +13,29 @@
         <tbody>
         {% if question_list %}
         {% for question in question_list.items %}
+<<<<<<< HEAD
         <tr class="text-center">
             <td>{{ question_list.total - ((question_list.page-1) * question_list.per_page) 
                 - loop.index0 }}
             </td>
             <td class="text-start">
+=======
+        <tr class = "text-center">
+            <td>{{ question_list.total - ((question_list.page-1) * question_list.per_page) 
+                - loop.index0 }}
+            </td>
+            <td class = "text-start">
+>>>>>>> 903db3bf0cf2c360e808902f7f65353df3683ff8
                 <a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a>
              {% if question.answer_set|length > 0 %}
                 <span class="text-danger small mx-2">{{ question.answer_set|length }}</span>
                 {% endif %}
             </td>
+<<<<<<< HEAD
             <td>{{ question.user.username }}</td>
+=======
+             <td>{{ question.user.username }}</td>  <!-- 글쓴이 추가 -->
+>>>>>>> 903db3bf0cf2c360e808902f7f65353df3683ff8
             <td>{{ question.create_date|datetime }}</td>
         </tr>
         {% endfor %}
